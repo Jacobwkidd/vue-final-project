@@ -20,7 +20,19 @@ const routes = [
     path: '/users', 
     name: 'UserList', 
     component: UserList 
+  },
+  { 
+    path: '/users/add', 
+    name: 'AddUser', 
+    component: UserDetails 
   }
+  // { 
+  //   path: '/users/:userId', 
+  //   name: 'UserDetails', 
+  //   component: UserDetails,
+  //   prop: true
+  // }
+
 ]
 
 const router = createRouter({

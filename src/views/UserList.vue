@@ -1,6 +1,7 @@
 <template>
     <div class="user-list">
-        <table border="1">
+        <button @click="$router.push({name: 'AddUser' })">Add New User</button>
+        <table border="1" v-if="users && roles">
             <tr>
                 <th>User</th>
                 <th>Email</th>
@@ -42,7 +43,8 @@ export default {
           // Note the nullish operator - I noticed that this method gets called even before the roles have been fetched!
         },
         editUser(id){
-            console.log("TODO: edit user " + id);
+            // console.log("TODO: edit user " + id);
+            this.$router.push({name: 'UserDetails', params: {userId:id}}); // pass through the route
         }
     }
 }
