@@ -3,18 +3,22 @@
         <form @submit.prevent="onSubmit">
             <div>
                 <label>First Name:</label>
+                <div class="validation">{{errors.firstName}}</div>
                 <input v-model="user.firstName" />
             </div>
             <div>
                 <label>Last Name:</label>
+                <div class="validation">{{errors.lastName}}</div>
                 <input v-model="user.lastName" />
             </div>
             <div>
                 <label>Email:</label>
+                <div class="validation">{{errors.email}}</div>
                 <input v-model="user.email" />
             </div>
             <div>
                 <label>Password:</label>
+                <div class="validation">{{errors.password}}</div>
                 <input type="password" v-model="user.password" />
             </div>
             <div>
@@ -43,7 +47,8 @@ export default {
     data(){
         return{
             user:null,
-            roles:[]
+            roles:[],
+            errors: {}
         }
     },
     mounted(){
@@ -67,15 +72,45 @@ export default {
             }
         },
         isValid(){
-            if(!this.user.firstName || !this.user.lastName || !this.user.email || !this.user.password){
-                return false;
+            // if(!this.user.firstName || !this.user.lastName || !this.user.email || !this.user.password){
+            //     return false;
+            // }
+            // return true;
+            this.errors = {};
+            let valid = true;
+            if(this.user.firstName == ""){
+                this.errors.firstName = "Please enter your first name";
+                valid = false;
             }
-            return true;
-        }
+            if(this.user.lastName == ""){
+                this.errors.lastName = "Please enter your last name";
+                valid = false;
+            }
+            if(this.user.email == ""){
+                this.errors.email = "Please enter your email";
+                valid = false;
+            }
+            else if(!this.validateEmailAddress(this.user.email)){
+                this.errors.email = "the email is not valid";
+                valid = false;
+            }
+            if(this.user.password == ""){
+                this.errors.password = "Please enter your password";
+                valid = false;
+            }
+
+            return valid;
+        },
+        // validates an email address (returns true it is valid, false if it is not)
+		validateEmailAddress(email){
+		    var regExp = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
+		    return regExp.test(email);
+		}
     }
 }
 </script>
 
 <style scoped>
 label{ display: block; }
+.validation{color: red; font-weight: bold;}
 </style>

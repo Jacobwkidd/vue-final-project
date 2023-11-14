@@ -33,6 +33,7 @@ export default {
         }
     },
     mounted(){
+        debugger;
         getAllUsers().then(users => this.users = users);
         getAllRoles().then(roles => this.roles = roles);
     },
