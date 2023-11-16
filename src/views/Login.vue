@@ -18,7 +18,8 @@
 // bootstrap this form
 <script>
 import {login} from '../api.js'
-export default {
+export default {// GStore = Global Store
+    inject: ['GStore'], // adding an option of this object and this is an array
     data(){
         return {
             email: "",
@@ -30,13 +31,12 @@ export default {
             if(this.validate()){
                 login(this.email, this.password).then(user => {
                     if(user){
-                        alert("AUTHENTICATED!");
-                        console.log(user);
+                        this.GStore.currentUser = user;
+                        sessionStorage.setItem("currentUser", JSON.stringify(user));
+                        this.$router.push({name: "home"}); // relocating to the page when you login.. to home
                     }else{
                         alert("LOGIN FAILED!");
                     }
-                }).catch((err) => {
-                    alert(err);
                 })
             }
         },
