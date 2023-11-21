@@ -1,10 +1,13 @@
 <template>
+  <div class="container-fluid fixed-bottom bg-dark text-white"> 
     <nav-bar></nav-bar>
+  </div>
+    
   <div class="container-lg pt-3">
     <router-view/>
   </div>
-  <div class="container-fluid fixed-bottom pt-3 bg-primary text-white">
-    <div class="container-lg">
+  <div class="container-fluid fixed-bottom bg-dark text-white">
+    <div class="container-lg pt-3 ">
       <footer>This is the footer</footer>
     </div>
   </div>
