@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import UserList from '../views/UserList.vue'
 // import UserDetails from '/users/:userId'
 import Login from '../views/Login.vue'
+import NotFound from '../views/NotFound.vue'
 
 const routes = [
   {
@@ -38,6 +39,15 @@ const routes = [
     path: '/login', 
     name: 'Login', 
     component: Login 
+  },
+  { 
+    path:"/404", 
+    component: NotFound, 
+    name:"NotFound"
+  },
+  { 
+    path:"/:catchAll(.*)", 
+    redirect: "/404" 
   }
 
 ]
