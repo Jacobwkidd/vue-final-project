@@ -4,12 +4,14 @@ import UserList from '../views/UserList.vue'
 // import UserDetails from '/users/:userId'
 import Login from '../views/Login.vue'
 import NotFound from '../views/NotFound.vue'
+import Users from '../views/Users.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta:{title: "Home Page"}
   },
   {
     path: '/about',
@@ -22,28 +24,33 @@ const routes = [
   { 
     path: '/users', 
     name: 'UserList', 
-    component: UserList 
+    component: UserList,
+    meta: {title: "Users"}
   },
   { 
     path: '/users/add', 
     name: 'AddUser', 
-    component: UserDetails 
+    component: UserDetails,
+    meta:{title: "New Users"}
   },
   { 
     path: '/users/:userId', 
     name: 'UserDetails', 
     component: UserDetails,
-    prop: true
+    prop: true,
+    meta: {title:"User Details"}
   },
   { 
     path: '/login', 
     name: 'Login', 
-    component: Login 
+    component: Login,
+    meta: {title: "Login"} 
   },
   { 
     path:"/404", 
     component: NotFound, 
-    name:"NotFound"
+    name:"NotFound",
+    meta: {title:"Page Not Found"}
   },
   { 
     path:"/:catchAll(.*)", 
@@ -56,5 +63,9 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+router.afterEach((to, from) => {
+  document.title = to.meta.title || "NO PAGE TITLE SET!";
+});
 
 export default router
