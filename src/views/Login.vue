@@ -1,21 +1,29 @@
 <template>
     <div class="login"> 
         <form @submit.prevent="onSubmit">
-            <div>
-                <label>Email:</label>
-                <input v-model="email" />
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label>Email:</label>
+                    <input v-model="email" />
+                </div>
             </div>
             <div>
                 <label>Password:</label>
                 <input type="password" v-model="password" />
             </div>
-            <div>
-                <input type="submit" id="btnSubmit" name="submit button">
+            <!-- <div>
+                <input type="submit" id="btnSubmit" name="submit button" class="">
+            </div> -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+                    <input type="submit" id="btnSubmit" name="submitButton" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
             </div>
         </form>
-    </div>
+    </div>  <!-- bootstrap this form -->
 </template>
-// bootstrap this form
+
 <script>
 import {login} from '../api.js'
 export default {// GStore = Global Store

@@ -2,13 +2,14 @@
   <div class="container-fluid fixed-bottom bg-dark text-white"> 
     <nav-bar></nav-bar>
   </div>
-    
-  <div class="container-lg pt-3">
+    <div class="container-fluid ">
+  <div class="container-lg pt-3 text-white" >
     <router-view/>
   </div>
-  <div class="container-fluid fixed-bottom bg-dark text-white">
-    <div class="container-lg pt-3 ">
-      <footer>This is the footer</footer>
+  </div>
+   <div class="container-fluid bg-dark fixed-bottom text-white">
+    <div class="container-lg">
+      <footer class="fs-6 py-2 text-start">&copy; 2023 Jacob Kidd</footer>
     </div>
   </div>
 </template>

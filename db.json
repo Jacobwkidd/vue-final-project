@@ -28,11 +28,11 @@
         {"tenant_user_id": 16, "tenant_user_first_name": "Billy", "tenant_user_last_name": "Bob", "tenant_user_email": "Billybob@england.com", "tenant_user_password": 123}
     ],
     "landlord":[
-        {"landlord_user_id": 1, "landlord_user_first_name": "Jacob" , "landlord_user_last_name": "Kidd", "landlord_user_email": "jacobkidd@kiddprop.com", "landlord_user_password": 1234},
-        {"landlord_user_id": 2, "landlord_user_first_name": "Gill" , "landlord_user_last_name": "Corn", "landlord_user_email": "gillcorn@cornprop.com", "landlord_user_password": 123},
-        {"landlord_user_id": 3, "landlord_user_first_name": "Billy" , "landlord_user_last_name": "Hour", "landlord_user_email": "billyhour@hourprop.com", "landlord_user_password": 123},
-        {"landlord_user_id": 4, "landlord_user_first_name": "Michael" , "landlord_user_last_name": "Parker", "landlord_user_email": "michaelparker@parkerprop.com", "landlord_user_password": 123},
-        {"landlord_user_id": 5, "landlord_user_first_name": "Seth" , "landlord_user_last_name": "Campbell", "landlord_user_email": "sethcampbell@campbellprop.com", "landlord_user_password": 123},
-        {"landlord_user_id": 6, "landlord_user_first_name": "Billy" , "landlord_user_last_name": "Bob", "landlord_user_email": "Billybob@bobprop.com", "landlord_user_password": 123}
+        {"landlord_user_id": 1, "landlord_user_first_name": "Jacob" , "landlord_user_last_name": "Kidd", "landlord_user_email": "jacobkidd@kiddprop.com", "landlord_user_password": 1234}
+    ],
+    "rent_paid":[
+        {"tenant_user_id": 1, "tenant_user_first_name": "Jacob" , "tenant_user_last_name": "Kipp", "amoutPaid": 500, "landlord_user_id": 1, "landlord_user_first_name": "Jacob" , "landlord_user_last_name": "Kidd"},
+        {"tenant_user_id": 2, "tenant_user_first_name": "Jeff", "tenant_user_last_name": "Jacobson", "amoutPaid": 500, "landlord_user_id": 1, "landlord_user_first_name": "Jacob" , "landlord_user_last_name": "Kidd"}
     ]
+    
 }
