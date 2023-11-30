@@ -62,7 +62,7 @@ export function getAllLandlord(){
 }
 
 
-export function getUserById(id){
+export function getLandlordById(id){
     return ax.get("Landlord/" + id).then(resp => (resp.data)).catch((error) => errorHandler("Error Getting Landlord By Id:" + error));
 }
 
@@ -80,7 +80,7 @@ export function getAllProperty(){
     return ax.get("Property/").then(resp => (resp.data)).catch(error => errorHandler("Error Getting All Property:" + error));
 }
 
-export function getUserById(id){
+export function getPropertyById(id){
     return ax.get("Property/" + id).then(resp => (resp.data)).catch((error) => errorHandler("Error Getting Property By Id:" + error));
 }
 

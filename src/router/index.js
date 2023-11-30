@@ -6,6 +6,7 @@ import Login from '../views/Login.vue'
 import NotFound from '../views/NotFound.vue'
 import Users from '../views/Users.vue'
 import Tenants from '../views/Tenants.vue'
+import UserDetails from '../views/UserDetails.vue'
 
 const routes = [
   {

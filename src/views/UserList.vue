@@ -28,8 +28,8 @@ import {getAllUsers, getAllRoles} from "@/api"
 export default {
     data(){
         return {
-            users: [],
-            roles:[]
+            users: null,
+            roles: null
         }
     },
     mounted(){
