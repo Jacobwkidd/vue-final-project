@@ -26,6 +26,7 @@
         </span> 
         -->
         <i class="bi bi-bootstrap" style="font-size: 1.4rem;"></i>
+        <i class="bi bi-bank"></i>
         <span v-if="GStore.currentUser">
           <b>Hello {{GStore.currentUser.firstName}} &nbsp;</b>
         </span>
