@@ -1,24 +1,25 @@
 <template>
     <div class="login"> 
         <form @submit.prevent="onSubmit">
-            <div class="input-group mb-3">
+            <div class="input-group mb-6">
                 <div class="input-group-prepend">
                     <label>Email:</label>
-                    <input v-model="email" />
+                    <input v-model="email" lass="form-control" placeholder="Example@example.com" />
                 </div>
             </div>
-            <div>
-                <label>Password:</label>
-                <input type="password" v-model="password" />
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputPassword2" class="sr-only">Password:</label>
+                <input type="password" v-model="password" placeholder="Password"/>
             </div>
             <!-- <div>
                 <input type="submit" id="btnSubmit" name="submit button" class="">
             </div> -->
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                    <!-- <button class="btn btn-outline-secondary" type="button">Button</button> -->
+                    <input type="submit" id="btnSubmit" name="submitButton" class="btn btn-primary mb-2" placeholder="" aria-label="" aria-describedby="basic-addon1">
                 </div>
-                    <input type="submit" id="btnSubmit" name="submitButton" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                    
             </div>
         </form>
     </div>  <!-- bootstrap this form -->

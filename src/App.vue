@@ -1,9 +1,9 @@
 <template>
-  <div class="container-fluid fixed-bottom bg-dark text-white"> 
+  <div class="container-fluid bg-dark text-white"> 
     <nav-bar></nav-bar>
   </div>
     <div class="container-fluid ">
-  <div class="container-lg pt-3 text-white" >
+  <div class="container-lg pt-3 text-white">
     <router-view/>
   </div>
   </div>
