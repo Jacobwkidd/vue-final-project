@@ -1,34 +1,30 @@
 {
     "users":[
-        {"id": 7, "firstName":"Bob", "lastName":"Smith", "email":"bob@smith.com", "password":"test", "roleId":1, "active": true},
+        {"id": 77, "firstName":"Bob", "lastName":"Smith", "email":"bob@smith.com", "password":"test", "roleId":1, "active": true},
         {"id": 96, "firstName":"Betty", "lastName":"Smith", "email":"betty@smith.com", "password":"test", "roleId":2, "active": true},
-        {"id": 33, "firstName":"Barney", "lastName":"Smith", "email":"barney@smith.com", "password":"test", "roleId":1, "active": false}
+        {"id": 33, "firstName":"Barney", "lastName":"Smith", "email":"barney@smith.com", "password":"test", "roleId":1, "active": false},
+        {"id": 1, "firstName": "Jacob" , "lastName": "Kipp", "email": "jacobkipp@gmail.uk", "password": 1234, "roleId":1, "active": true},
+        {"id": 2, "firstName": "Jeff", "lastName": "Jacobson", "email": "jeffjacobson@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 3, "firstName": "Sally", "lastName": "Green", "email": "sallygreen@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 4, "firstName": "May", "lastName": "Clausen", "email": "maycleusen@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 5, "firstName": "Alex", "lastName": "Schiender", "email": "alexsch@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 6, "firstName": "Alec", "lastName": "Windsor", "email": "alecwindsor@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 7, "firstName": "Alix", "lastName": "Java", "email": "alixjave@yahoo.com", "password": 123, "roleId":1, "active": true},
+        {"id": 8, "firstName": "Jacob", "lastName": "Pries", "email": "jacobpries@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 9, "firstName": "Luke", "lastName": "Brown", "email": "lukebrown@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 10, "firstName": "Matt", "lastName": "Smith", "email": "mattsmith@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 11, "firstName": "Paul", "lastName": "Play", "email": "paulplay@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 12, "firstName": "Grace", "lastName": "Wood", "email": "gracewood@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 13, "firstName": "Carter", "lastName": "Lockwood", "email": "carterlockwood@gmail.com", "password": 123, "roleId":1, "active": true},
+        {"id": 14, "firstName": "Darth", "lastName": "Vader", "email": "darthvader@deathstar.com", "password": 123, "roleId":1, "active": true},
+        {"id": 15, "firstName": "Peter", "lastName": "Walsh", "email": "petrwalsh@england.com", "password": 123, "roleId":1, "active": true},
+        {"id": 16, "firstName": "Billy", "lastName": "Bob", "email": "Billybob@england.com", "password": 123, "roleId":1, "active": true},
+        {"id": 17, "firstName": "Jacob" , "lastName": "Kidd", "email": "jacobkidd@kiddprop.com", "password": 1234, "roleId":2, "active": true}
     ],
     "roles":[
         {"id": 1, "name": "tenant User", "description": "tenant user with tenant special permission"},
         {"id": 2, "name": "Landlord User", "description": "Landlord user with landlord special permissions"},
         {"id": 3, "name": "Admin", "description": "Extra permissions"}
-    ],
-    "tenant":[
-        {"id": 1, "tenant_user_first_name": "Jacob" , "tenant_user_last_name": "Kipp", "tenant_user_email": "jacobkipp@gmail.uk", "tenant_user_password": 1234},
-        {"id": 2, "tenant_user_first_name": "Jeff", "tenant_user_last_name": "Jacobson", "tenant_user_email": "jeffjacobson@gmail.com", "tenant_user_password": 123},
-        {"id": 3, "tenant_user_first_name": "Sally", "tenant_user_last_name": "Green", "tenant_user_email": "sallygreen@gmail.com", "tenant_user_password": 123},
-        {"id": 4, "tenant_user_first_name": "May", "tenant_user_last_name": "Clausen", "tenant_user_email": "maycleusen@gmail.com", "tenant_user_password": 123},
-        {"id": 5, "tenant_user_first_name": "Alex", "tenant_user_last_name": "Schiender", "tenant_user_email": "alexsch@gmail.com", "tenant_user_password": 123},
-        {"id": 6, "tenant_user_first_name": "Alec", "tenant_user_last_name": "Windsor", "tenant_user_email": "alecwindsor@gmail.com", "tenant_user_password": 123},
-        {"id": 7, "tenant_user_first_name": "Alix", "tenant_user_last_name": "Java", "tenant_user_email": "alixjave@yahoo.com", "tenant_user_password": 123},
-        {"id": 8, "tenant_user_first_name": "Jacob", "tenant_user_last_name": "Pries", "tenant_user_email": "jacobpries@gmail.com", "tenant_user_password": 123},
-        {"id": 9, "tenant_user_first_name": "Luke", "tenant_user_last_name": "Brown", "tenant_user_email": "lukebrown@gmail.com", "tenant_user_password": 123},
-        {"id": 10, "tenant_user_first_name": "Matt", "tenant_user_last_name": "Smith", "tenant_user_email": "mattsmith@gmail.com", "tenant_user_password": 123},
-        {"id": 11, "tenant_user_first_name": "Paul", "tenant_user_last_name": "Play", "tenant_user_email": "paulplay@gmail.com", "tenant_user_password": 123},
-        {"id": 12, "tenant_user_first_name": "Grace", "tenant_user_last_name": "Wood", "tenant_user_email": "gracewood@gmail.com", "tenant_user_password": 123},
-        {"id": 13, "tenant_user_first_name": "Carter", "tenant_user_last_name": "Lockwood", "tenant_user_email": "carterlockwood@gmail.com", "tenant_user_password": 123},
-        {"id": 14, "tenant_user_first_name": "Darth", "tenant_user_last_name": "Vader", "tenant_user_email": "darthvader@deathstar.com", "tenant_user_password": 123},
-        {"id": 15, "tenant_user_first_name": "Peter", "tenant_user_last_name": "Walsh", "tenant_user_email": "petrwalsh@england.com", "tenant_user_password": 123},
-        {"id": 16, "tenant_user_first_name": "Billy", "tenant_user_last_name": "Bob", "tenant_user_email": "Billybob@england.com", "tenant_user_password": 123}
-    ],
-    "landlord":[
-        {"landlord_user_id": 1, "landlord_user_first_name": "Jacob" , "landlord_user_last_name": "Kidd", "landlord_user_email": "jacobkidd@kiddprop.com", "landlord_user_password": 1234}
     ],
     "rent_paid":[
         {"id": 1, "tenant_user_first_name": "Jacob" , "tenant_user_last_name": "Kipp", "amoutPaid": 500, "landlord_user_id": 1, "landlord_user_first_name": "Jacob" , "landlord_user_last_name": "Kidd"},

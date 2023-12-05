@@ -30,7 +30,7 @@ export function insertUser(user){
 
 // TENANT METHOD
 export function getAllTenant(){
-    return ax.get("Tenant/").then(resp => (resp.data)).catch(error => errorHandler("Error Getting All Tenant:" + error));
+    return ax.get("tenant/").then(resp => (resp.data)).catch(error => errorHandler("Error Getting All Tenant:" + error));
 }
 
 export function getTenantById(id){
@@ -46,7 +46,7 @@ export function insertTenant(Tenant){
 }
 
 export function login(email, password) {
-    return ax.get(`Tenant/?email=${email}&password=${password}`).then(resp => {
+    return ax.get(`users/?email=${email}&password=${password}`).then(resp => {
 		if(resp.data.length == 1){
 			return resp.data[0] // we want to get the first, and hopefully only, user from the resp.data array
 		}else{

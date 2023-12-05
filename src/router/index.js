@@ -5,8 +5,9 @@ import UserList from '../views/UserList.vue'
 import Login from '../views/Login.vue'
 import NotFound from '../views/NotFound.vue'
 import Users from '../views/Users.vue'
-import Tenants from '../views/Tenants.vue'
+import Tenants from '../views/TenantList.vue'
 import UserDetails from '../views/UserDetails.vue'
+import TenantDetails from '../views/TenantDetails.vue'
 
 const routes = [
   {
@@ -49,10 +50,16 @@ const routes = [
     meta: {title: "Login"} 
   },
   {
-    path: '/tenants',
-    name: 'Tenants',
+    path: '/TenantList',
+    name: 'Tenant List',
     component: Tenants,
     meta: {title: "Tenants"}
+  },
+  {
+    path: '/TenantDetails',
+    name: 'Tenant Details',
+    component: TenantDetails,
+    meta: {title: "Tenant Details"}
   },
   { 
     path:"/404", 

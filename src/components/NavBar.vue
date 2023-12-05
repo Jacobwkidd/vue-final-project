@@ -25,8 +25,8 @@
           </a>
         </span> 
         -->
-        <i class="bi bi-bootstrap" style="font-size: 1.4rem;"></i>
-        <i class="bi bi-bank"></i>
+        <!-- <i class="bi bi-bootstrap" style="font-size: 1.4rem;"></i> -->
+        <i class="bi bi-bank" style="font-size: 1.4rem;"></i>
         <span v-if="GStore.currentUser">
           <b>Hello {{GStore.currentUser.firstName}} &nbsp;</b>
         </span>
@@ -49,16 +49,26 @@
                     About
                 </router-link>
             </li>
-            <li class="nav-item" v-if="GStore.currentUser?.roleId == 2">
+            <li class="nav-item" v-if="GStore.currentUser?.roleId == 3">
               <router-link class="nav-link" :to="{name: 'UserList'}">
                 Users
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-item" v-if="!GStore.currentUser" :to="{name: 'Login'}">
+              <router-link class="nav-link" v-if="!GStore.currentUser" :to="{name: 'Login'}">
                 Login
               </router-link>
-              <a v-else @click="logout" class="nav-item" href="#">Log Out</a>
+              <a v-else @click="logout" class="nav-link" href="#">Log Out</a>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" v-if="!GStore.currentUser" :to="{name: 'Tenant Details'}">
+                Tenant Details
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" v-if="GStore.currentUser?.roleId == 2" :to="{name: 'Tenant List'}">
+                Tenant List
+              </router-link>
             </li>
           </ul>
         </div>

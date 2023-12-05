@@ -3,13 +3,13 @@
     <nav-bar></nav-bar>
   </div>
     <div class="container-fluid ">
-  <div class="container-lg pt-3 text-white">
+  <div class="container-lg pt-3 text-white d-flex justify-content-center">
     <router-view/>
   </div>
   </div>
    <div class="container-fluid bg-dark fixed-bottom text-white">
     <div class="container-lg">
-      <footer class="fs-6 py-2 text-start">&copy; 2023 Jacob Kidd</footer>
+      <footer class="fs-6 py-2 text-center">&copy; 2023 Jacob Kidd</footer>
     </div>
   </div>
 </template>
@@ -40,6 +40,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #3a2daa;
 }
 </style>
