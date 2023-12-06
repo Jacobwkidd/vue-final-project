@@ -26,7 +26,7 @@
 
 <script>
 import {getAllTenant, getAllRoles} from "@/api"
-import { getAllLandlord } from '@/api';
+// import { getAllLandlord } from '@/api';
 
 export default {
     inject: ["GStore"],
@@ -39,7 +39,7 @@ export default {
     },
     mounted(){
         //debugger;
-        getAllLandlord().then(landlord => this.landlord = landlord);
+        // getAllLandlord().then(landlord => this.landlord = landlord);
         getAllTenant().then(tenant => this.tenant = tenant);
     },
     methods:{

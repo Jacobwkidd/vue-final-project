@@ -8,6 +8,7 @@ import Users from '../views/Users.vue'
 import Tenants from '../views/TenantList.vue'
 import UserDetails from '../views/UserDetails.vue'
 import TenantDetails from '../views/TenantDetails.vue'
+import PropertyList from '../views/PropertyList.vue'
 
 const routes = [
   {
@@ -42,6 +43,12 @@ const routes = [
     component: UserDetails,
     prop: true,
     meta: {title:"User Details"}
+  },
+  {
+    path: '/properties',
+    name: 'Properties',
+    component: PropertyList,
+    meta: {title:"Properties"}
   },
   { 
     path: '/login', 

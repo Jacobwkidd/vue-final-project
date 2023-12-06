@@ -61,6 +61,11 @@
               <a v-else @click="logout" class="nav-link" href="#">Log Out</a>
             </li>
             <li class="nav-item">
+              <router-link class="nav-link" v-if="!GStore.currentUser?.roleId == 2" :to="{name: 'UsersDetails'}">
+                Users Details
+              </router-link>
+            </li>  
+            <li class="nav-item">
               <router-link class="nav-link" v-if="!GStore.currentUser?.roleId == 2" :to="{name: 'Tenant Details'}">
                 Tenant Details
               </router-link>

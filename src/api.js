@@ -30,19 +30,19 @@ export function insertUser(user){
 
 // TENANT METHOD
 export function getAllTenant(){
-    return ax.get("tenant/").then(resp => (resp.data)).catch(error => errorHandler("Error Getting All Tenant:" + error));
+    return ax.get("users/").then(resp => (resp.data)).catch(error => errorHandler("Error Getting All Tenant:" + error));
 }
 
 export function getTenantById(id){
-    return ax.get("tenant/" + id).then(resp => (resp.data)).catch((error) => errorHandler("Error Getting Tenant By Id:" + error));
+    return ax.get("users/" + id).then(resp => (resp.data)).catch((error) => errorHandler("Error Getting Tenant By Id:" + error));
 }
 
 export function updateTenant(Tenant){
-    return ax.put("tenant/" + Tenant.id, Tenant).catch((error) => errorHandler("Error Updating Tenant:" + error));
+    return ax.put("users/" + Tenant.id, Tenant).catch((error) => errorHandler("Error Updating Tenant:" + error));
 }
 
 export function insertTenant(Tenant){
-    return ax.post("tenant/", Tenant).catch((error) => errorHandler("Error Inserting Tenant:" + error));
+    return ax.post("users/", Tenant).catch((error) => errorHandler("Error Inserting Tenant:" + error));
 }
 
 export function login(email, password) {
@@ -90,6 +90,10 @@ export function updateProperty(Property){
 
 export function insertProperty(Property){
     return ax.post("Property/", Property).catch((error) => errorHandler("Error Inserting Property:" + error));
+}
+
+export function getPropertiesByLandlordId(landlordId){
+    return ax.get("property/?landlordId=" + landlordId).then(resp => (resp.data)).catch((error) => errorHandler("Error By landlord Id Property:" + error));
 }
 
 function errorHandler(msg){
