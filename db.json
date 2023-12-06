@@ -31,6 +31,22 @@
         {"id": 2, "tenant_user_first_name": "Jeff", "tenant_user_last_name": "Jacobson", "amoutPaid": 500, "landlord_user_id": 1, "landlord_user_first_name": "Jacob" , "landlord_user_last_name": "Kidd"}
     ],
     "property":[
+        {"propertyId": 1, "Address": "123 Main", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 2, "Address": "456 Elm St", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 3, "Address": "789 Oak St", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 4, "Address": "101 Pine St", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 5, "Address": "101 Pine St", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 6, "Address": "303 Birch St", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 7, "Address": "404 Cedar St", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 8, "Address": "505 Spruce St", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 9, "Address": "606 Redwood St", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 10, "Address": "707 Sequoia St", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 11, "Address": "808 Pine St", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 12, "Address": "1233 Main", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 13, "Address": "1232 Main", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 14, "Address": "1231 Main", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 15, "Address": "1236 Main", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
+        {"propertyId": 16, "Address": "1237 Main", "city": "La Crosse", "Zipcode" : 54601, "rent": 500, "state": "WI"},
 
     ]
     

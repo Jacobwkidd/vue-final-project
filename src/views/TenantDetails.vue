@@ -1,15 +1,15 @@
 <template>
-    <div v-if="Tenant">
-        <form @submit.prevent="onSubmit">
+    <div v-if="Tenant" class="login w-50 p-3 d-flex justify-content-center">
+        <form @submit.prevent="onSubmit" class="px-4 py-3">
             <div>
-                <label>First Name:</label>
+                <label class="form-label">First Name:</label>
                 <div class="validation">{{errors.firstName}}</div>
-                <input v-model="Tenant.firstName" />
+                <input v-model="Tenant.firstName" class="form-control" placeholder="John"/>
             </div>
             <div>
                 <label>Last Name:</label>
                 <div class="validation">{{errors.lastName}}</div>
-                <input v-model="Tenant.lastName" />
+                <input v-model="Tenant.lastName" type="password" class="form-control" placeholder="Password"/>
             </div>
             <div>
                 <label>Email:</label>

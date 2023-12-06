@@ -34,15 +34,15 @@ export function getAllTenant(){
 }
 
 export function getTenantById(id){
-    return ax.get("Tenant/" + id).then(resp => (resp.data)).catch((error) => errorHandler("Error Getting Tenant By Id:" + error));
+    return ax.get("tenant/" + id).then(resp => (resp.data)).catch((error) => errorHandler("Error Getting Tenant By Id:" + error));
 }
 
 export function updateTenant(Tenant){
-    return ax.put("Tenant/" + Tenant.id, Tenant).catch((error) => errorHandler("Error Updating Tenant:" + error));
+    return ax.put("tenant/" + Tenant.id, Tenant).catch((error) => errorHandler("Error Updating Tenant:" + error));
 }
 
 export function insertTenant(Tenant){
-    return ax.post("Tenant/", Tenant).catch((error) => errorHandler("Error Inserting Tenant:" + error));
+    return ax.post("tenant/", Tenant).catch((error) => errorHandler("Error Inserting Tenant:" + error));
 }
 
 export function login(email, password) {

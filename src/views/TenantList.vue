@@ -1,18 +1,18 @@
 <template>
-    <div class="Tenants">
+    <div class="Tenants" v-if="GStore.currentUser?.roleId == 2">
         <button @click="$router.push({name: 'AddTenant' })" class="btn btn-primary">Add New Tenant</button>
-        <table border="1" v-if="Tenant && roles">
+        <table border="1" class="table table-dark">
             <tr>
-                <th>Tenant</th>
-                <th>Email</th>
-                <th>Active</th>
-                <th>Role</th>
-                <th></th>
+                <th scope="col">Tenant</th>
+                <th scope="col">Email</th>
+                <th scope="col">Active</th>
+                <th scope="col">Role</th>
+                <th scope="col"></th>
             </tr>
-            <div class="form-row">
+            <div >
                 <tr v-for="t in tenant" :key="t.id">
-                    <td>{{t.tenant_user_first_name + " " + t.tenant_user_last_name}}</td>
-                    <td>{{t.tenant_user_email}}</td>
+                    <td scope="row">{{t.firstName + " " + t.lastName}}</td>
+                    <td>{{t.email}}</td>
                     <td>{{getRoleNameById(u.roleId)}}</td>
                     <td>{{u.active ? "yes" : "no"}}</td>
                     <td>
@@ -26,12 +26,13 @@
 
 <script>
 import {getAllTenant, getAllRoles} from "@/api"
-import { getAllLandlord } from '../api';
+import { getAllLandlord } from '@/api';
 
 export default {
+    inject: ["GStore"],
     data(){
         return {
-            tenant: null,
+            tenant: [],
             landlord: [],
             roles:[]
         }
