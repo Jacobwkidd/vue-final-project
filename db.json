@@ -19,7 +19,7 @@
         {"id": 14, "firstName": "Darth", "lastName": "Vader", "email": "darthvader@deathstar.com", "password": 123, "roleId":1, "active": true},
         {"id": 15, "firstName": "Peter", "lastName": "Walsh", "email": "petrwalsh@england.com", "password": 123, "roleId":1, "active": true},
         {"id": 16, "firstName": "Billy", "lastName": "Bob", "email": "Billybob@england.com", "password": 123, "roleId":1, "active": true},
-        {"id": 17, "firstName": "Jacob" , "lastName": "Kidd", "email": "jacobkidd@kiddprop.com", "password": 1234, "roleId":2, "active": true}
+        {"id": 17, "firstName": "Jacob" , "lastName": "Kidd", "email": "jacobkidd@kiddprop.com", "password": 1234, "roleId":3, "active": true}
     ],
     "roles":[
         {"id": 1, "name": "tenant User", "description": "tenant user with tenant special permission"},
@@ -31,9 +31,9 @@
         {"id": 2, "tenant_user_first_name": "Jeff", "tenant_user_last_name": "Jacobson", "amoutPaid": 500, "landlord_user_id": 1, "landlord_user_first_name": "Jacob" , "landlord_user_last_name": "Kidd"}
     ],
     "property":[
-        {"id": 1, "address": "123 Main", "city": "La Crosse", "zipcode" : 54601, "rent": 500, "state": "WI", "tenantName": "Bob", "landlordId": 96},
-        {"id": 2, "address": "456 Elm St", "city": "La Crosse", "zipcode" : 54601, "rent": 500, "state": "WI", "tenantName": "Bob", "landlordId": 96},
-        {"id": 3, "address": "789 Oak St", "city": "La Crosse", "zipcode" : 54601, "rent": 500, "state": "WI", "tenantName": "Bob", "landlordId": 17}
+        {"id": 1, "address": "123 Main", "city": "La Crosse", "zipcode" : 54601, "rent": 500, "state": "WI", "tenantName": "Bob", "landlordId": 96, "paidRent": true},
+        {"id": 2, "address": "456 Elm St", "city": "La Crosse", "zipcode" : 54601, "rent": 500, "state": "WI", "tenantName": "Bob", "landlordId": 96, "paidRent": true},
+        {"id": 3, "address": "789 Oak St", "city": "La Crosse", "zipcode" : 54601, "rent": 500, "state": "WI", "tenantName": "Bob", "landlordId": 17, "paidRent": true}
     ]
     
 }

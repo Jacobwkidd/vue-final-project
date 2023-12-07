@@ -103,6 +103,10 @@ export function getPropertiesByLandlordId(landlordId){
     return ax.get("property/?landlordId=" + landlordId).then(resp => (resp.data)).catch((error) => errorHandler("Error By landlord Id Property:" + error));
 }
 
+export function connectRentPaidToPropterty(){
+    
+}
+
 export function login(email, password) {
     return ax.get(`users/?email=${email}&password=${password}`).then(resp => {
 		if(resp.data.length == 1){
