@@ -75,6 +75,11 @@
                 Tenant List
               </router-link>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link" v-if="GStore.currentUser?.roleId == 3" :to="{name: 'Property List'}">
+                Property List
+              </router-link>
+            </li>
           </ul>
         </div>
       </div>
