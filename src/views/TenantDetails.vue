@@ -22,12 +22,6 @@
                 <input type="password" v-model="Tenant.password" />
             </div>
             <div>
-                <label>Role:</label>
-                <select v-if="roles.length > 0" v-model="Tenant.roleId">
-                	<option v-for="r in roles" :key="r.id" :value="r.id">{{r.name}}</option>
-                </select>
-            </div>
-            <div>
                 <label>Active:</label>
                 <input type="checkbox" v-model="Tenant.active">
             </div>

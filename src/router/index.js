@@ -9,6 +9,7 @@ import Tenants from '../views/TenantList.vue'
 import UserDetails from '../views/UserDetails.vue'
 import TenantDetails from '../views/TenantDetails.vue'
 import PropertyList from '../views/PropertyList.vue'
+import PropertyDetails from '../views/PropertyDetails.vue'
 
 const routes = [
   {
@@ -49,6 +50,12 @@ const routes = [
     name: 'Properties',
     component: PropertyList,
     meta: {title:"Properties"}
+  },
+  {
+    path: '/propertyDetails',
+    name: 'PropertyDetails',
+    component: PropertyDetails,
+    meta: {title: "Property Details"}
   },
   { 
     path: '/login', 

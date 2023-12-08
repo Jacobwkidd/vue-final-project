@@ -2,9 +2,13 @@
   <!-- <h1>Hello Property</h1> -->
     <!-- {{GStore.currentUser}} -->
     <!-- {{properties}} -->
+    
     <div>
-        <button @click="$router.push({name: 'addProperty'})" type="button" class="btn btn-primary mb-4">Add New Property</button>
+        
+        <button @click="$router.push({name: 'addProperty'})" type="button" class="btn btn-primary mb-4"><i class="bi bi-house"></i> Add New Property</button>
+        
         <table class="table table-responsive">
+            
             <thead class="table-dark">
                 <tr>
                     <th scope="col">Tenant Name</th>
@@ -27,7 +31,7 @@
                     <td>{{p.rent}}</td>
                     <!-- <td>{{p.paidRent}}</td> -->
                     <td>
-                    <button class="btn btn-primary" @click="editUser(p.id)">Edit</button>
+                    <button class="btn btn-primary" @click="editProperty(p.id)">Edit</button>
                     </td>
                     <!-- <td>
                     <button class="btn btn-primary" @click="paidRent(p.id)">Add Rent Payment</button>
@@ -55,12 +59,7 @@ export default {
         getPropertiesByLandlordId(this.GStore.currentUser.id).then(properties => this.properties = properties);
     },
     methods:{
-         getRoleNameById(id){
-          const role = this.roles.find(r => r.id == id);
-          return role?.name;
-          // Note the nullish operator - I noticed that this method gets called even before the roles have been fetched!
-        },
-        editUser(id){
+        editProperty(id){
             // console.log("TODO: edit user " + id);
             this.$router.push({name: 'PropertyDetails', params: {userId:id}}); // pass through the route
         },

@@ -1,6 +1,6 @@
 <template>
     <div class="user-list">
-        <button @click="$router.push({name: 'AddUser' })">Add New User</button>
+        <button @click="$router.push({name: 'AddUser' })" class="btn btn-primary"><i class="bi bi-person"></i> Add New User</button>
         <table border="1" v-if="users && roles">
             <tr>
                 <th>User</th>
