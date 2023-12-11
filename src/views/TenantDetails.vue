@@ -26,8 +26,8 @@
                 <input type="checkbox" v-model="Tenant.active">
             </div>
             <div>
-                <input type="submit" id="btnSubmit" name="submit button">
-                <input type="button" @click="$router.push({name:'TenantList'})" value="Cancel">
+                <input type="submit" id="btnSubmit" name="submit button" class="btn btn-primary mb-4 px-4 me-2">
+                <input type="button" @click="$router.push({name:'TenantList'})" value="Cancel" class="btn btn-secondary mb-4 px-4 me-2">
             </div>
         </form>
     </div>

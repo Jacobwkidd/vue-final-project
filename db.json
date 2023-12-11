@@ -22,7 +22,7 @@
         {"id": 17, "firstName": "Jacob" , "lastName": "Kidd", "email": "jacobkidd@kiddprop.com", "password": 1234, "roleId":3, "active": true}
     ],
     "roles":[
-        {"id": 1, "name": "tenant User", "description": "tenant user with tenant special permission"},
+        {"id": 1, "name": "Tenant User", "description": "tenant user with tenant special permission"},
         {"id": 3, "name": "Landlord User", "description": "Landlord user with landlord special permissions"},
         {"id": 2, "name": "Admin", "description": "Extra permissions"}
     ],

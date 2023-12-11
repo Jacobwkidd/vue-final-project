@@ -40,7 +40,7 @@
         <div class="collapse navbar-collapse justify-content-start align-center bg-dark text-light" id="main-nav" >
           <ul class="navbar-nav">
             <li class="nav-item">
-                <router-link class="nav-link" :to="{name: 'home'}" data-bs-target="#main-nav" data-bs-toggle="collapse">
+                <router-link class="nav-link" to="/" data-bs-target="#main-nav" data-bs-toggle="collapse">
                   Home
                 </router-link> 
             </li>
@@ -65,13 +65,9 @@
                 Users Details
               </router-link>
             </li>  
+
             <li class="nav-item">
-              <router-link class="nav-link" v-if="!GStore.currentUser?.roleId == 2" :to="{name: 'Tenant Details'}">
-                Tenant Details
-              </router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" v-if="GStore.currentUser?.roleId == 2" :to="{name: 'Tenant List'}">
+              <router-link class="nav-link" v-if="GStore.currentUser?.roleId == 3" :to="{name: 'Tenant List'}">
                 Tenant List
               </router-link>
             </li>

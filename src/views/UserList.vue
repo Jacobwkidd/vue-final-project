@@ -1,23 +1,27 @@
 <template>
     <div class="user-list">
-        <button @click="$router.push({name: 'AddUser' })" class="btn btn-primary"><i class="bi bi-person"></i> Add New User</button>
-        <table border="1" v-if="users && roles">
-            <tr>
-                <th>User</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Active</th>
-                <th></th>
-            </tr>
-            <tr v-for="u in users" :key="u.id">
-                <td>{{u.firstName + " " + u.lastName}}</td>
-                <td>{{u.email}}</td>
-                <td>{{getRoleNameById(u.roleId)}}</td>
-                <td>{{u.active ? "yes" : "no"}}</td>
-                <td>
-                    <button class="btn btn-primary" @click="editUser(u.id)">Edit</button>
-                </td>
-            </tr>
+        <button @click="$router.push({name: 'AddUser' })" class="btn btn-primary mb-4"><i class="bi bi-person"></i> Add New User</button>
+        <table class="table table-responsive" v-if="users && roles">
+            <thead class="table-dark">
+                <tr >
+                    <th>User</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Active</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="thread-light">
+                <tr v-for="u in users" :key="u.id">
+                    <td>{{u.firstName + " " + u.lastName}}</td>
+                    <td>{{u.email}}</td>
+                    <td>{{getRoleNameById(u.roleId)}}</td>
+                    <td>{{u.active ? "yes" : "no"}}</td>
+                    <td>
+                        <button class="btn btn-primary" @click="editUser(u.id)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </template>

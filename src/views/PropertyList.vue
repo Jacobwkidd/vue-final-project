@@ -3,7 +3,7 @@
     <!-- {{GStore.currentUser}} -->
     <!-- {{properties}} -->
     
-    <div>
+    <div class="properties">
         
         <button @click="$router.push({name: 'addProperty'})" type="button" class="btn btn-primary mb-4"><i class="bi bi-house"></i> Add New Property</button>
         
@@ -44,7 +44,8 @@
 </template>
 
 <script>
-import {getPropertiesByLandlordId} from "@/api"
+import {getPropertiesByLandlordId, } from "@/api"
+// getAllProperties
 
 export default {
     inject: ["GStore"],
@@ -56,12 +57,13 @@ export default {
      mounted(){
         //debugger;
         // getAllLandlord().then(landlord => this.landlord = landlord);
+        // getAllProperties().then(property => this.property = property);
         getPropertiesByLandlordId(this.GStore.currentUser.id).then(properties => this.properties = properties);
     },
     methods:{
         editProperty(id){
             // console.log("TODO: edit user " + id);
-            this.$router.push({name: 'PropertyDetails', params: {userId:id}}); // pass through the route
+            this.$router.push({name: 'propertyDetails', params: {propertyId:id}}); // pass through the route
         },
         // paidRent(id){
         //     this.$router.push({name: 'PropertyPaidRent'});

@@ -2,38 +2,38 @@
     <div v-if="user">
         <form @submit.prevent="onSubmit">
             <div>
-                <label>First Name:</label>
+                <label class="form-label">First Name:</label>
                 <div class="validation">{{errors.firstName}}</div>
-                <input v-model="user.firstName" />
+                <input v-model="user.firstName" class="form-control" placeholder="John"/>
             </div>
             <div>
-                <label>Last Name:</label>
+                <label class="form-label">Last Name:</label>
                 <div class="validation">{{errors.lastName}}</div>
-                <input v-model="user.lastName" />
+                <input v-model="user.lastName"  class="form-control" placeholder="Doe"/>
             </div>
             <div>
-                <label>Email:</label>
+                <label class="form-label" >Email:</label>
                 <div class="validation">{{errors.email}}</div>
-                <input v-model="user.email" />
+                <input v-model="user.email" type="email" class="form-control" placeholder="email@example.com" />
             </div>
             <div>
-                <label>Password:</label>
+                <label class="form-label">Password:</label>
                 <div class="validation">{{errors.password}}</div>
-                <input type="password" v-model="user.password" />
+                <input type="password" v-model="user.password" class="form-control" placeholder="Password"/>
             </div>
-            <div>
-                <label>Role:</label>
-                <select v-if="roles.length > 0" v-model="user.roleId">
+            <div >
+                <label class="form-label">Role:</label>
+                <select v-if="roles.length > 0" v-model="user.roleId" class="form-select">
                 	<option v-for="r in roles" :key="r.id" :value="r.id">{{r.name}}</option>
                 </select>
             </div>
             <div>
-                <label>Active:</label>
+                <label class="form-check-label">Active:</label>
                 <input type="checkbox" v-model="user.active">
             </div>
-            <div>
-                <input type="submit" id="btnSubmit" name="submit button">
-                <input type="button" @click="$router.push({name:'UserList'})" value="Cancel">
+            <div class="buttons">
+                <input type="submit" id="btnSubmit" name="submit button" class="btn btn-primary mb-4">
+                <input type="button" @click="$router.push({name:'UserList'})" value="Cancel" class="btn btn-primary mb-4">
             </div>
         </form>
     </div>
