@@ -16,9 +16,10 @@
                     <th scope="col">City</th>
                     <th scope="col">Zip Code</th>
                     <th scope="col">Rent</th>
+                    <th scope="col">State</th>
                     <!-- <th scope="col">Paid Rent</th> -->
+                    <th scope="col">Rent Paid</th>
                     <th scope="col">Edit</th>
-                    <!-- <th scope="col">Add Rent Paid</th> -->
                 </tr>
             </thead>
           
@@ -27,15 +28,13 @@
                     <td scope="row">{{p.tenantName}}</td>
                     <td>{{p.address}}</td>
                     <td>{{p.city}}</td>
-                    <td>{{p.zipcode}}</td>
+                    <td>{{p.zipCode}}</td>
                     <td>{{p.rent}}</td>
-                    <!-- <td>{{p.paidRent}}</td> -->
+                    <td>{{p.state}}</td>
+                    <td>{{p.paidRent}}</td>
                     <td>
-                    <button class="btn btn-primary" @click="editProperty(p.id)">Edit</button>
+                        <button class="btn btn-primary" @click="editProperty(p.id)">Edit</button>
                     </td>
-                    <!-- <td>
-                    <button class="btn btn-primary" @click="paidRent(p.id)">Add Rent Payment</button>
-                    </td> -->
                 </tr>
             </tbody>
         </table>
@@ -59,11 +58,13 @@ export default {
         // getAllLandlord().then(landlord => this.landlord = landlord);
         // getAllProperties().then(property => this.property = property);
         getPropertiesByLandlordId(this.GStore.currentUser.id).then(properties => this.properties = properties);
+        
     },
     methods:{
         editProperty(id){
-            // console.log("TODO: edit user " + id);
-            this.$router.push({name: 'propertyDetails', params: {propertyId:id}}); // pass through the route
+            console.log("TODO: edit user " + id);
+            this.$router.push({name: 'PropertyDetails', params: {propertyId:id}}); // pass through the route
+            // console.log("After router push");
         },
         // paidRent(id){
         //     this.$router.push({name: 'PropertyPaidRent'});

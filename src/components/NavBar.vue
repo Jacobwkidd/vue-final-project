@@ -40,16 +40,16 @@
         <div class="collapse navbar-collapse justify-content-start align-center bg-dark text-light" id="main-nav" >
           <ul class="navbar-nav">
             <li class="nav-item">
-                <router-link class="nav-link" to="/" data-bs-target="#main-nav" data-bs-toggle="collapse">
+                <router-link class="nav-link" :to="{name: 'home'}" >
                   Home
                 </router-link> 
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <router-link class="nav-link" to="/about">
                     About
                 </router-link>
-            </li>
-            <li class="nav-item" v-if="GStore.currentUser?.roleId == 3">
+            </li> -->
+            <li class="nav-item" v-if="GStore.currentUser?.roleId == 2">
               <router-link class="nav-link" :to="{name: 'UserList'}">
                 Users
               </router-link>

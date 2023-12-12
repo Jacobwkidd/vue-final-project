@@ -1,7 +1,7 @@
 <template>
     <div class="login w-50 p-3 d-flex justify-content-center" > 
         <form @submit.prevent="onSubmit" class="px-4 py-3">
-            
+            <h1>Login</h1>
             <div class="input-group mb-4">
                 <div class="input-group-prepend form-outline mb-4 ">
                     <label class="form-label">Email:</label>

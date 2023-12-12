@@ -43,7 +43,7 @@ const routes = [
     path: '/users/:userId', 
     name: 'UserDetails', 
     component: UserDetails,
-    prop: true,
+    props: true,
     meta: {title:"User Details"}
   },
   {
@@ -53,18 +53,20 @@ const routes = [
     meta: {title:"Properties"}
   },
   {
+    path: '/properties/:propertyId',
+    name: 'PropertyDetails',
+    component: PropertyDetails,
+    props: true,
+    meta: {title: "Edit Property Details"}
+  },
+  {
     path: '/properties/add',
     name: 'addProperty',
     component: PropertyDetails,
-    prop: true,
+    props: true,
     meta: {title:"New Property"}
   },
-  {
-    path: '/property/:property',
-    name: 'propertyDetails',
-    component: PropertyDetails,
-    meta: {title: "Property Details"}
-  },
+  
   { 
     path: '/login', 
     name: 'Login', 
@@ -76,6 +78,12 @@ const routes = [
     name: 'Tenant List',
     component: Tenants,
     meta: {title: "Tenants"}
+  },
+  {
+    path: '/Tenants/add',
+    name: 'addTenant',
+    component: TenantDetails,
+    meta: {title: "Add Tenant"}
   },
   {
     path: '/TenantDetails',

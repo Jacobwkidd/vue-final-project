@@ -1,33 +1,33 @@
 <template>
-    <div v-if="Tenant" class="login w-50 p-3 d-flex justify-content-center">
+    <div v-if="tenant" class="login w-50 p-3 d-flex justify-content-center">
         <form @submit.prevent="onSubmit" class="px-4 py-3">
             <div>
                 <label class="form-label">First Name:</label>
                 <div class="validation">{{errors.firstName}}</div>
-                <input v-model="Tenant.firstName" class="form-control" placeholder="John"/>
+                <input v-model="tenant.firstName" class="form-control" placeholder="John"/>
             </div>
             <div>
-                <label>Last Name:</label>
+                <label class="form-label">Last Name:</label>
                 <div class="validation">{{errors.lastName}}</div>
-                <input v-model="Tenant.lastName" type="password" class="form-control" placeholder="Password"/>
+                <input v-model="tenant.lastName" type="password" class="form-control" placeholder="Password"/>
             </div>
             <div>
-                <label>Email:</label>
+                <label class="form-label">Email:</label>
                 <div class="validation">{{errors.email}}</div>
-                <input v-model="Tenant.email" />
+                <input v-model="tenant.email" />
             </div>
             <div>
-                <label>Password:</label>
+                <label class="form-label">Password:</label>
                 <div class="validation">{{errors.password}}</div>
-                <input type="password" v-model="Tenant.password" />
+                <input type="password" v-model="tenant.password" />
             </div>
             <div>
-                <label>Active:</label>
-                <input type="checkbox" v-model="Tenant.active">
+                <label class="form-check-label">Active:</label>
+                <input type="checkbox" v-model="tenant.active">
             </div>
             <div>
                 <input type="submit" id="btnSubmit" name="submit button" class="btn btn-primary mb-4 px-4 me-2">
-                <input type="button" @click="$router.push({name:'TenantList'})" value="Cancel" class="btn btn-secondary mb-4 px-4 me-2">
+                <input type="button" @click="$router.push({name:'Tenant List'})" value="Cancel" class="btn btn-secondary mb-4 px-4 me-2">
             </div>
         </form>
     </div>
@@ -40,9 +40,8 @@ export default {
     props:["tenantId"],
     data(){
         return{
-            tenant:null,
-            landlord:null,
-            roles:[],
+            tenant: null,
+            landlord: null,
             errors: {}
         }
     },
@@ -59,7 +58,7 @@ export default {
         }
         else{
             // if the tenantId prop was not passed in, then we are creating a new empty tenant
-            this.tenant = {id:0, firstName:"", lastName:"", email:"", password:"", roleId:1, active: true};
+            this.tenant = {id:0, firstName:"", lastName:"", email:"", password:"", roleId: 1, active: true};
         }
 
        
@@ -68,9 +67,9 @@ export default {
         onSubmit() {
             if(this.isValid()){
                 if(this.tenantId > 0){
-                    updateTenant(this.Tenant).then(resp => this.$router.push({name: 'TenantList'}));
+                    updateTenant(this.Tenant).then(resp => this.$router.push({name: 'Tenant List'}));
                 }else{
-                    insertTenant(this.Tenant).then(resp => this.$router.push({name: 'TenantList'}));
+                    insertTenant(this.Tenant).then(resp => this.$router.push({name: 'Tenant List'}));
                 }
             }
         },

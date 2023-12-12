@@ -32,8 +32,8 @@
                 <input type="checkbox" v-model="user.active">
             </div>
             <div class="buttons">
-                <input type="submit" id="btnSubmit" name="submit button" class="btn btn-primary mb-4">
-                <input type="button" @click="$router.push({name:'UserList'})" value="Cancel" class="btn btn-primary mb-4">
+                <input type="submit" id="btnSubmit" name="submit button" class="btn btn-primary mb-4 px-4 me-2">
+                <input type="button" @click="$router.push({name:'UserList'})" value="Cancel" class="btn btn-secondary mb-4 px-4 me-2">
             </div>
         </form>
     </div>
@@ -53,7 +53,7 @@ export default {
     },
     mounted(){
          if(this.$route.name != "AddUser" && isNaN(this.userId)){
-            this.$router.push({name:"NotFound"})
+            this.$router.push({name:"NotFound"});
         }
         getAllRoles().then(roles => this.roles = roles);
 

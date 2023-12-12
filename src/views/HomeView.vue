@@ -3,7 +3,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <i class="bi bi-house"></i>
     <h1>Find your property TODAY!</h1>
-    <img src="apartments" alt="apartments">
+    <img src="@/assets/homepage.jpg"/>
   </div>
 </template>
 
